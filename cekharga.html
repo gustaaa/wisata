@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <title>Hotel Aston</title>
+        <link rel="stylesheet" type="text/css" href="cekharga.css">
+    </head>
+    <body>
+        <p id="demo"></p>
+        <script type="text/javascript">
+	    function myFunction() {
+		    let x = document.getElementById('input').value;
+		    let text;
+		    if (isNaN(x) || x < 1 || x > 10) {
+			text = "Input not valid";
+		    } else {
+			text = "Input OK";
+		    }
+		    document.getElementById('demo').innerHTML = text;
+    	}
+        </script>
+        <form>
+            <div class = "cek">
+                <h2>Cek Harga</h2>
+                <div class="input">
+                    <input type="text" name="lantai">
+                    <span>Lantai</span>
+                </div>
+                <div class="input">
+                    <input type="password" name="type">
+                    <span>Type</span>
+                </div>
+                <div class="input">
+                    <input type="text" name="hari">
+                    <span>Jumlah Hari</span>
+                </div>
+                <div class="input">
+                    <input type="text" name="diskon">
+                    <span>Diskon</span>
+                </div>
+                <div class="input">
+                    <input type="submit" onclick = "validateForm()" value="Cek Harga">
+                </div>
+            </div>
+        </form>
+    </body>
+</html>

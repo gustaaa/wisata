@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Hotel Aston - HOME
+    </title>
+    <link rel="stylesheet" type="text/css" href="home.css">
+    <script src="jquery-3.6.0.js"></script>
+    <script>
+        var i = 0;
+        $(document).ready(function () {
+            $('.slidertitle, #slider img').hide();
+            showNextImage();
+            setInterval('showNextImage()', 3000);
+        });
+        function showNextImage() {
+            i++;
+            $('#sliderImage' + i).appendTo('#slider').fadeIn(1100).delay(1100).fadeOut(1100);
+            $('#title' + i).appendTo('#slider').fadeIn(1100).delay(1100).fadeOut(1100);
+            if (i == 3) {
+                i = 0;
+            }
+        };
+    </script>
+
+</head>
+
+<body>
+    <p>
+        <a href="index.html">Home</a> <a href="cekharga.html">Cek Harga</a> <a href="login.html">LogOut</a>
+    </p>
+</body>
+<h2><b>ASTON Banyuwangi Hotel & Conference Center <br> <br>
+        <div id="slider">
+            <img id="sliderImage1" src="../uts/img/aston.jpg">
+            <div class="slidertitle" id="title">Gambar 1</div>
+        </div>
+    </b>
+</h2>
+<h3>
+    <b>ASTON Banyuwangi Hotel & Conference Center </b><br><br>
+    ASTON Banyuwangi Hotel & Conference Center merupakan Hotel bintang 4 dengan desain berkelas nan modern,
+    ASTON Banyuwangi Hotel & Conference Center berlokasi tepat di pusat kota Banyuwangi yang terkenal dengan keindahan
+    alamnya serta sebagai destinasi baru dan ikon pariwisata di Jawa Timur,
+    ASTON Banyuwangi Hotel & Conference Center adalah hotel yang menawarkan sensasi menginap yang tidak biasa.
+    Lengkap dengan pelayanan prima dan fasilitas luar biasa.
+    Hotel ini memiliki Ballroom yang mempesona serta dapat mengakomodasi hingga 1.000 tamu, serta empat ruang pertemuan
+    berukuran sedang untuk acara khusus, mulai dari pesta ulang tahun, pertunangan, dan pernikahan, hingga pertemuan
+    bisnis, pameran, dan peluncuran produk.
+</h3>
+
+</html>

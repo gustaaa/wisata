@@ -1,0 +1,41 @@
+<html>
+
+<head>
+    <title>Hotel Aston</title>
+    <link rel="stylesheet" type="text/css" href="login.css">
+    <script type="text/javascript">
+        function validateForm() {
+            let a = document.forms["myForm"]["username"].value;
+            let b = document.forms["myForm"]["password"].value;
+            if (a == "" && b == "") {
+                alert("Harus terisi");
+                return false;
+            } else if (b < 5) {
+                alert("Password minimal 5 karakter");
+                return false;
+            }
+        }
+    </script>
+
+</head>
+
+<body>
+    <form name="myForm" action="index.html" onsubmit="return validateForm()" method="post">
+        <div class="login">
+            <h2>Login</h2>
+            <div class="input">
+                <input type="text" name="username">
+                <span>Username</span>
+            </div>
+            <div class="input">
+                <input type="password" name="password">
+                <span>Password</span>
+            </div>
+            <div class="input">
+                <input type="submit" value="Login">
+            </div>
+        </div>
+    </form>
+</body>
+
+</html>
